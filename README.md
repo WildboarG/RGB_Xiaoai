@@ -62,7 +62,7 @@
 
 值得注意的是：
 
- 			esp8266仅支持2.4Ghz的wifi,搜不到5Ghz的信号
+ 	esp8266仅支持2.4Ghz的wifi,搜不到5Ghz的信号
 
 ```c++
 #define BLINKER_ESP_SMARTCONFIG    //智能配网
@@ -88,11 +88,13 @@ void setup(){
 //在手机app上创建一个名为btn2的按键
 BlinkerButton Button2("btn2");
 
-//创建一个点击处理函数
+// 创建一个点击处理函数
+// 配网按键按下执行的函数
 void button2_callback(const String & state) {
        BLINKER_LOG("get button state: ", state);
-       Blinker.reset();   //调用系统定义的擦数函数
+       Blinker.reset();   //调用系统定义的擦数的函数
 }
+
 
 void setup(){
     
