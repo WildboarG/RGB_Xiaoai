@@ -29,10 +29,9 @@ void button1_callback(const String & state) {
     if(LED_Flag) SET_RGB(255,255,255,LED_Bright);
     else SET_RGB(0,0,0,0);
 }
-
+// 配网按键按下执行的函数
 void button2_callback(const String & state) {
     BLINKER_LOG("get button state: ", state);
-    //digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
     Blinker.reset();
     }
 // 如果未绑定的组件被触发，则会执行其中内容
